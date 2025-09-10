@@ -1,9 +1,9 @@
 from flask import Flask, render_template, jsonify, request
 
-from MY_APP.model.transaction_type import TransactionType
-from MY_APP.model.transaction import Transaction, TransactionSchema
 from MY_APP.model.income import Income, IncomeSchema
 from MY_APP.model.expense import Expense, ExpenseSchema
+from MY_APP.model.transaction_type import TransactionType
+
 
 
 app = Flask(__name__)
@@ -13,10 +13,6 @@ transactions = [
     Income('Dividends', 200),
     Expense('pizza', 50),
     Expense('Rock Concert', 100)
-]
-
-incomes =[
-    {'description': 'salary', 'amount': 5000}
 ]
 
 # Homepage route
